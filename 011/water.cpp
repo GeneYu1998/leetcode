@@ -5,15 +5,24 @@ using namespace std;
 
 class Solution {
 public:
-    int maxArea(vector<int>& height) 
-    {
-    int Area = 0;
-    int right;
-    for (int i = 0; i < height.size(); ++i)
+    int AreaMax = 0;
+    int maxArea(vector<int>& height) {
+    int len = height.size();
+    int left = 0, right = len - 1;
+    while(left < right + 1)
     {   
-        right = i;
-        while((min(height[i], height[right++]) * (right - i)) > (height.size() - i));
+        if (height[left] < height[right])
+        {
+        this->AreaMax = max(this->AreaMax, (right - left) * height[left]);
+        ++left;
+        }
+        else
+        {
+        this->AreaMax = max(this->AreaMax, (right - left) * height[right]);    
+        --right;
+        }
 
     }
+    return this->AreaMax;
     }
 };
