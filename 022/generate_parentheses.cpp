@@ -6,7 +6,7 @@ using namespace std;
 class Solution {
 public:
     vector<string> ans;
-    void recursive_serach(string& valid, int left_cnt, int right_cnt)
+    void recursive_search(string& valid, int left_cnt, int right_cnt)
     {
          if (left_cnt==0 && right_cnt==0)
          {
@@ -18,13 +18,13 @@ public:
             if (left_cnt > 0) 
             {   
                 valid.push_back('(');
-                recursive_serach(valid, left_cnt - 1, right_cnt);
+                recursive_search(valid, left_cnt - 1, right_cnt);
                 valid.pop_back();
             }
             if (right_cnt > left_cnt) 
             {  
                valid.push_back(')');
-               recursive_serach(valid, left_cnt, right_cnt - 1); 
+               recursive_search(valid, left_cnt, right_cnt - 1); 
                valid.pop_back();
             }
          }
@@ -34,7 +34,7 @@ public:
     string valid = string("(");
     int left_cnt = n - 1;
     int right_cnt = n;
-    recursive_serach(valid, left_cnt, right_cnt);
+    recursive_search(valid, left_cnt, right_cnt);
     return ans;
     }
 };
