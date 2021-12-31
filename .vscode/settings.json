@@ -7,6 +7,12 @@
         "iostream": "cpp",
         "string": "cpp",
         "cmath": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "list": "cpp",
+        "*.tcc": "cpp",
+        "initializer_list": "cpp",
+        "limits": "cpp",
+        "type_traits": "cpp",
+        "utility": "cpp"
     }
 }
