@@ -1,7 +1,5 @@
 #include <iostream>
-
 using namespace std;
-
 
 // Definition for singly-linked list.
 struct ListNode {
@@ -11,12 +9,10 @@ struct ListNode {
     ListNode(int x) : val(x), next(nullptr) {}
     ListNode(int x, ListNode *next) : val(x), next(next) {}
 
-    // recursively destroy pointers
+    // recursively destroy objects on heap.
     ~ListNode()
     {   
-        if (this->next){
-          this->next->~ListNode();  
-        } 
+        if (this->next) this->next->~ListNode();  
         delete this;
     }
 };
