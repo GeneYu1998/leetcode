@@ -19,13 +19,15 @@ public:
       sign = 1 - sign;
     }
     
+    // search for the upper bound
     long div = divisor;
     while(div < dividend)
     {
         div <<= 1;
         out_add <<= 1;
     }
-
+    
+    // quickdivide (reverse of quickpow)
     while(dividend != 0)
     {   
         if(div > dividend) 
