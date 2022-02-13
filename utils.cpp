@@ -36,3 +36,11 @@ struct TreeNode {
     TreeNode* right;
     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
 };
+
+// swap int using xor operation
+void swap(int& a, int& b)
+{
+    a ^= b;
+    b ^= a;
+    a ^= b;
+}
