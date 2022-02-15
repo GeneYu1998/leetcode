@@ -38,9 +38,19 @@ struct TreeNode {
 };
 
 // swap int using xor operation
-void swap(int& a, int& b)
+void swapByXOR(int& a, int& b)
 {
     a ^= b;
     b ^= a;
     a ^= b;
 }
+
+// int main()
+// {
+//     int a;
+//     int b;
+//     scanf("%d %d", &a, &b);
+//     cout << "before swap: " << "a : " <<  a << " " << " b : " << b << endl;
+//     swapByXOR(a, b);
+//     cout << "after swap: " << "a : " <<  a << " " << " b : " << b << endl;
+// }
