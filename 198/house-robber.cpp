@@ -9,7 +9,7 @@ public:
     {   
         nums[i] += prev;
         prev = cur;
-     cur = max(nums[i], cur);
+        cur = max(nums[i], cur);
     }
     return cur;
     }
