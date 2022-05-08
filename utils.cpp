@@ -7,8 +7,11 @@
 #include <functional>
 #include <utility>
 #include <numeric>
+#include <list>
+#include <tuple>
 
 using namespace std;
+
 
 // Definition for singly-linked list.
 struct ListNode {
