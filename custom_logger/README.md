@@ -5,13 +5,13 @@ cxx custom logger enabling format printing directly on terminals.
   <summary>__Table of Contents__</summary>
   <ol>
     <li>
-      <a href="#build/rebuild">Compiling</a>
+      <a href="#buildrebuild">Compiling</a>
     </li>
     <li>
-      <a href="#test/run">Run</a>
+      <a href="#testrun">Run</a>
     </li>
     <li>
-      <a href="#clean CMakeCache/output">Clean</a>
+      <a href="#clean-cmakecacheoutput">Clean</a>
     </li>
   </ol>
 </details>
